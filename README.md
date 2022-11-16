@@ -1,3 +1,6 @@
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/9282572/202305432-5bf07e96-8e7b-4ad9-998d-8242f8a9a315.png">
+
+
 # ChurrosApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
