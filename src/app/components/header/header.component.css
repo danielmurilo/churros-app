@@ -1,0 +1,12 @@
+mat-toolbar{
+    background-color: orange;
+}
+
+mat-toolbar span{ 
+    color: white;
+}
+img {
+    width: 70px;
+    margin-left: 20px;
+    border-radius: 10px;
+}

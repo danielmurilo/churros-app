@@ -1,0 +1,57 @@
+<main>
+    <h1>Pontos de Venda Cadastrados: </h1>
+    <ul>
+        <li *ngFor="let pdv of pdvs">{{pdv.nome}} - {{pdv.municipio}} - {{pdv.uf}} → Horários: {{pdv.comeca}} - {{pdv.termina}}</li>
+    </ul>
+    <mat-divider></mat-divider>
+    <h1>Cadastre Um Novo Ponto de Venda:</h1>
+    <form [formGroup]="pontoVendaForm" (submit)="salvarPDV()">
+
+        <div class="container">
+
+            <mat-form-field appearance="fill" class="hundred-percent">
+              <mat-label>Nome</mat-label>
+              <input matInput required formControlName="nome">
+            </mat-form-field>
+
+            <div class="hundred-percent divider">
+                <mat-form-field appearance="fill" class="half">
+                    <mat-label>Estado</mat-label>
+                    <mat-select formControlName="uf">                        
+                        <mat-option *ngFor="let estado of estados" (onSelectionChange)="buscarCidadesPorEstado(estado.sigla)" [value]="estado.sigla">{{estado.sigla}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+                <mat-form-field appearance="fill" class="half">
+                    <mat-label>Município</mat-label>
+                    <mat-select formControlName="municipio">
+                        <mat-option [value]="municipio.nome" *ngFor="let municipio of municipios">{{municipio.nome}}</mat-option>
+                      </mat-select>
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="fill" class="hundred-percent">
+                <mat-label>Ponto de Venda</mat-label>
+                <input matInput required formControlName="pdv">
+            </mat-form-field>
+
+            <div class="hundred-percent divider">
+                <mat-form-field appearance="fill" class="half">
+                    <mat-label>Começa Às:</mat-label>
+                    <input matInput required formControlName="comeca">
+                </mat-form-field>
+    
+                <mat-form-field appearance="fill" class="half">
+                    <mat-label>Termina Às:</mat-label>
+                    <input matInput required formControlName="termina">
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button>Cadastrar</button>
+            
+
+        </div>
+
+    </form>
+</main>
+

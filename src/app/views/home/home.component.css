@@ -1,0 +1,28 @@
+main{
+    padding: 25px;
+}
+h1 {
+    font-weight: 700;
+}
+mat-divider{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hundred-percent {
+    width: 100%;
+}
+
+.half {
+    width: 48%;
+}
+
+.divider {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: orange;
+    color: white;
+}
